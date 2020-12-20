@@ -1,0 +1,12 @@
+<div class="mt-3 ">
+    <app-generic-table *ngIf="Customersrow.length > 0" 
+        [columns]="CustomersColumns" 
+        [rows]="Customersrow"
+        [isPageable]="true" 
+        [isFilterable]="true"
+        [length]=Customersrow.length
+        (pageIndexChange)="setData($event)"
+        (filter)="getfilter($event)"
+        (sort)="sortData($event)">
+    </app-generic-table>
+</div>
